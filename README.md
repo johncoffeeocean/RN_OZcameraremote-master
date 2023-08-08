@@ -1,9 +1,9 @@
 
 ###  Setting Up the Environment on Your VPS
 
-> **1.** Install Python Version 3.7 or Higher
+ **1.** Install Python Version 3.7 or Higher
 
-> **2.** Configure PowerShell as Administrator
+ **2.** Configure PowerShell as Administrator
 - Open PowerShell as an administrator.
 - Execute the following command to set the execution policy:
 ```bash
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 
  **4.** Enhance VS Code with Python Extension
-Install the Python extension for Visual Studio Code to facilitate development.
+- Install the Python extension for Visual Studio Code to facilitate development.
 
  **5.** Organize Your Data
 - Place your resume file as `resume.docx` in the documents folder.
@@ -33,25 +33,25 @@ Install the Python extension for Visual Studio Code to facilitate development.
 ```
  
  **2.** Bot Execution
-- Launch the bot.py script using Ctrl + F5 in VS Code.
-- Use Ctrl + Shift + S to trigger signups.
+- Launch the bot.py script using `Ctrl + F5` in VS Code.
+- Use `Ctrl + Shift + S` to trigger signups.
 - The bot will automate Chrome to create multiple accounts based on your `data.json` configuration.
 - A message box indicates successful signup completion.
 
  **3.** HTML to JSON Conversion on local PC
 After signup completion, your Gmail will receive verification requests.
-- Open the Upwork verification email and press Ctrl+S to save the HTML content as "gmail.html".
+- Open the Upwork verification email and press Ctrl+S to save the HTML content as `gmail.html`.
 - Run `gmailToJson.py` on your local PC to convert HTML emails to JSON format.
 If the program success, you could see your fake emails and verify links on `email.json`
 
  **4.** Account Verification and Creation
 - Return to the VPS environment.
-- Copy content from local PC's email.json to email-verify.json on the VPS.
+- Copy content from local PC's email.json to `email-verify.json` on the VPS.
 - Press `Ctrl + Shift + V` to verify and make your account.
 The bot will verify and create your account automatically
 
  **5.** Program Launch
-Execute launch.py to open the UI.
+Execute `launch.py` to open the UI.
 Fill details and click launch; program automates login.
 
 With these steps completed, your setup is ready to enable seamless account creation, verification, and project bidding on Upwork. 
