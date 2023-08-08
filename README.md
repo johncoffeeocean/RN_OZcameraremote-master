@@ -1,19 +1,88 @@
-This app utilises the device's gyroscope for pan and tilt control and it
-utilises an FTDI USB to serial cable adapted to receive LANC messages from a
-Manfrotto tripod zoom handle.
 
-Video streaming is by the means of a Janus WebRTC server whose client runs in
-a browser inside the app. A modified version of
-https://janus.conf.meetecho.com/streamingtest.html is used to connect to the
-Janus server.
-See http://v2.ozapi.net:2080/cameracontrol.html for the actual javascript
-client the app uses.
 
-The app exposes some controls to the Javascript client running in the browser.
+> `Tests` (compatibility matrix)
 
-The app communicates the pan/tilt/zoom commands via a UDP stream to the gimbal
-control server.
+### 👉 Set Environment
 
-### Clone
+1. Install Python >= 3.7
 
-git clone https://github.com/johncoffeeocean
+2. Install NPM
+| `v16.20.0` 
+
+3. Run powershell.exe as administator and Execute follow command
+```bash
+ Set-ExecutionPolicy RemoteSigned -Force
+```
+### 👉 Start the Frontend 
+
+> **Step 1** - Once the project is downloaded, change the directory to `react-ui`. 
+
+```bash
+$ cd frontend
+```
+
+<br >
+
+> **Step 2** - Install dependencies via NPM or yarn
+
+```bash
+$ npm i --legacy-peer-deps
+// OR
+$ yarn
+```
+
+<br />
+
+> **Step 3** - Start in development mode
+
+```bash
+$ npm run start 
+// OR
+$ yarn start
+```
+
+<br />
+
+At this point, the app is available in the browser `localhost:3000` (the default address).
+<br /> 
+
+### 👉 Start the Backend Server 
+
+> **Step 1** - Change the directory to `backend`
+
+```bash
+$ cd backend
+```
+
+<br >
+
+> **Step 2** - Install dependencies using a `virtual environment`
+
+
+```bash
+# (Windows based systems)
+$ python -m venv env
+$ .\env\Scripts\activate.ps1
+
+$ pip install -r requirements.txt
+```
+
+<br />
+
+> **Step 3** - Setup the database 
+
+```bash
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+<br />
+
+> **Step 4** - Start the API server (development mode)
+
+```bash
+$ python manage.py runserver 5000
+```
+
+Use the API via `POSTMAN` or `Swagger Dashboard` at `localhost:5000`.
+<br />
+
